@@ -40,4 +40,12 @@ public class Framework extends SoftwareProduct {
 
         return frameworkElement;
     }
+
+    @Override
+    public String toString() {
+        return "Framework{" +
+                "supportLanguage='" + supportLanguage + '\'' +
+                ", currentVersion='" + currentVersion + '\'' +
+                "} " + super.toString();
+    }
 }

@@ -58,6 +58,11 @@ public abstract class SoftwareProduct {
         descriptionElement.appendChild(document.createTextNode(description));
 
         mainElement.appendChild(productNameElement);
+        mainElement.appendChild(developerElement);
+        mainElement.appendChild(launchDateElement);
+        mainElement.appendChild(licenceElement);
+        mainElement.appendChild(sizeMBElement);
+        mainElement.appendChild(descriptionElement);
         return mainElement;
     }
 
@@ -107,5 +112,17 @@ public abstract class SoftwareProduct {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "SoftwareProduct{" +
+                "productName='" + productName + '\'' +
+                ", developer='" + developer + '\'' +
+                ", launchDate=" + launchDate +
+                ", licence='" + licence + '\'' +
+                ", sizeMB=" + sizeMB +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

@@ -37,7 +37,7 @@ public class DevOpsTool extends SoftwareProduct {
         Element cloudBasedElement = document.createElement("CloudBased");
         cloudBasedElement.appendChild(document.createTextNode(this.cloudBased ? "True" : "False"));
         devopsElement.appendChild(cloudBasedElement);
-        return superElement;
+        return devopsElement;
     }
 
     public String getCategoria() {
@@ -54,5 +54,13 @@ public class DevOpsTool extends SoftwareProduct {
 
     public void setCloudBased(boolean cloudBased) {
         this.cloudBased = cloudBased;
+    }
+
+    @Override
+    public String toString() {
+        return "DevOpsTool{" +
+                "categoria='" + categoria + '\'' +
+                ", cloudBased=" + cloudBased +
+                "} " + super.toString();
     }
 }

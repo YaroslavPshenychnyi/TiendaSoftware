@@ -42,4 +42,14 @@ public class IDE extends SoftwareProduct {
         
         return ideElement;
     }
+
+    @Override
+    public String toString() {
+        return "IDE{" +
+                "supportPlugins=" + supportPlugins +
+                ", supportedLanguage='" + supportedLanguage + '\'' +
+                "} " + super.toString();
+    }
+
+
 }
